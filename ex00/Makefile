@@ -6,7 +6,7 @@
 #    By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 13:56:52 by yrabby            #+#    #+#              #
-#    Updated: 2023/06/18 16:38:24 by yrabby           ###   ########.fr        #
+#    Updated: 2023/06/19 10:20:45 by yrabby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME 					= test
 
 # class
 CLASS_DIR				= .
-CLASS_NAME				= Base A B C
+CLASS_NAME				= 
 
 # other src
 OTHER_SRC				= 
@@ -29,7 +29,7 @@ SRC_NAME				= $(addsuffix $(SRC_SUFFIX), $(CLASS_NAME) $(SRC_MAIN) $(OTHER_SRC))
 SRC						= $(addprefix $(SRC_DIR)/, $(SRC_NAME))
 
 # other header
-OTHER_HEAD				= 
+OTHER_HEAD				= whatever
 
 # head
 HEAD_SUFFIX				= .hpp
