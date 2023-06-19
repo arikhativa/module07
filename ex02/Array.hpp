@@ -6,7 +6,7 @@
 /*   By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 11:42:23 by yrabby            #+#    #+#             */
-/*   Updated: 2023/06/19 12:27:31 by yrabby           ###   ########.fr       */
+/*   Updated: 2023/06/19 12:40:23 by yrabby           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,8 @@ class Array
 	*/
 
 		Array()
-			: _array(new T[0]), _size(0)
+			: _array(NULL), _size(0)
 		{
-			// TODO what does T[0] do?
 		};
 		
 		explicit Array(unsigned int n)
@@ -81,9 +80,12 @@ class Array
 		{
 			if ( this != &rhs )
 			{
-				delete [] _array;
-				_size = rhs.size();
-				_array = new T[_size];
+				if (size() != rhs.size())
+				{
+					delete [] _array;
+					_size = rhs.size();
+					_array = new T[_size];
+				}
 
 				std::size_t	i = 0;
 
